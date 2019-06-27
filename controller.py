@@ -43,7 +43,7 @@ def interpret_reading(reading):
     return int(MEASURE_EXPR.findall(reading)[0]) / 1000
 
 def create_headings():
-    with open(MEASUREMENTS_FILENAME, 'w') as handle:
+    with open(MEASUREMENTS_FILENAME, 'a') as handle:
         handle.write("Time\tDevice 1 Reading\tDevice 2 Reading\n")
 
 
@@ -79,7 +79,7 @@ def control_lamp():
 
             if Glob_Q.empty(): # computation continues
 
-                now = datetime.time(datetime.now)
+                now = datetime.time(datetime.now())
 
                 if DAWN <= now <= DUSK: # day condition
                     hlamp.off()
