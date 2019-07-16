@@ -91,7 +91,7 @@ def control_lamp():
             else: # time to stop
                 break
 
-            # only check to turn on the lamp every 5 seconds
+            # only check to turn on the lamp every 5 minutes
             sleep(5 * 60)
 
 def main(keep):
