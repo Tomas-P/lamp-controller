@@ -4,6 +4,7 @@ assert sys.version.startswith('3.7')
 
 from gpiozero import LED
 import glob
+import os
 from subprocess import run
 import re
 import threading
@@ -123,3 +124,4 @@ def main(keep):
 if __name__ == '__main__':
     hours = int(input("How many days will the experiment run for? "))
     main(hours)
+    os.system("sudo halt")
